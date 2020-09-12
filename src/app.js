@@ -90,7 +90,7 @@ app.post("/repositories/:id/like", verifyIdExisting, verifyRepositoryExisting, (
 
   repositories[repositoryIndex] = repository
 
-  return response.send({ likes: repository.likes });
+  return response.send(repository);
 });
 
 module.exports = app;
